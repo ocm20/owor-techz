@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Kampala Air Quality</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css"> 
+    <link rel="stylesheet" href="header.css">
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body >
+     <header class="header" >
+     <i class='bx bx-wind' style="color: whitesmoke; font-size: 50px;"></i>
+      <a href="#" class="logo">Kampala Air Quality</a>
+      <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+      </label>
+      <nav class="navbar">
+        
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="login.html" style="--i:2;">login</a>
+        <a href="register.html" style="--i:3;">Register</a>
+      </nav>
+    </header>
+
+    <section class="dashboard">
+        <div class="">
+            <div class="dashboard-header">
+                <h2 class="hzz">Air Quality Dashboard</h2>
+                <div class="dashboard-controls">
+                    <select id="time-period">
+                        <option value="24h">Last 24 Hours</option>
+                        <option value="7d">Last 7 Days</option>
+                        <option value="30d">Last 30 Days</option>
+                        <option value="1y">Last Year</option>
+                    </select>
+                    <select id="location">
+                        <option value="central">Central Kampala</option>
+                        <option value="nakawa">Nakawa Division</option>
+                        <option value="makindye">Makindye Division</option>
+                        <option value="kawempe">Kawempe Division</option>
+                        <option value="rubaga">Rubaga Division</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card main-chart">
+                    <h3>Air Quality Index Trend</h3>
+                    <canvas id="aqi-trend-chart"></canvas>
+                </div>
+                <div class="card current-stats">
+                    <h3>Current Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Current AQI</span>
+                        <span class="stat-value" id="current-aqi-value">--</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Primary Pollutant</span>
+                        <span class="stat-value" id="primary-pollutant">--</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Health Implications</span>
+                        <span class="stat-value" id="health-implications">--</span>
+                    </div>
+                </div>
+                <div class="card pollutant-breakdown">
+                    <h3>Pollutant Breakdown</h3>
+                    <canvas id="pollutant-chart"></canvas>
+                </div>
+                <div class="card location-map">
+                    <h3>Pollution Map</h3>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Interactive map of Kampala showing air quality by location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer "style="background:transparent ;">
+        <div class="container" style="background:transparent ;">
+            <p>&copy; 2025 Kampala Air Quality Monitoring system </p>
+            <div class="social-links" style="background:transparent ;">
+                <a href="#"><i class="fab fa-twitter" style="font-size: 48px;color: rgb(32, 32, 155);"></i></a>
+                <a href="#"><i class="fab fa-facebook" style="font-size: 48px;color: blue;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="font-size: 48px;color: violet;"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

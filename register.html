@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form  Kampala Air Quality</title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="Registration">
+   <header class="header">
+        <i class='bx bx-wind' style="color: whitesmoke; font-size: 50px;"></i>
+      <a href="#" class="logo">Kampala Air Quality</a>
+      <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+      </label>
+      <nav class="navbar">
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="login.html" style="--i:2;">Login</a>
+        <a href="register.html" style="--i:3;">Register</a>
+      </nav>
+    </header>
+    <section class="Register-section">
+        <div class="register-container">
+            <div class="register-card">
+                 <h1>Registration Form</h1>
+              <p>Please fill out the form below </p>
+              <hr>
+              <form onsubmit="signUp(event)">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone">
+                </div>
+                <button type="submit" class="btn">Register</button>
+               </form>
+               <p >Already have an account? <a href="login.html">Login  here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+            <p>&copy; 2025 Kampala Air Quality Monitoring System</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter" style="font-size: 48px;color: rgb(23, 23, 175);"></i></a>
+                <a href="#"><i class="fab fa-facebook" style="font-size: 48px;color: blue;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="font-size: 48px;color: blueviolet;"></i></a>
+            </div>
+    </footer>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+<!-- Your config and script -->
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

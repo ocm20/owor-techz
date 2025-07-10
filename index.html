@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampala Air Quality Monitoring</title>
+    <link rel="stylesheet" href="header.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head><link rel="stylesheet" href="styles.css">
+<body> 
+    <header class="header" >
+        <i class='bx bx-wind' style="color: whitesmoke; font-size: 50px;"></i>
+      <a href="#" class="logo">Kampala Air Quality</a>
+      <input type="checkbox" id="check">
+      <label for="check"class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+      </label>
+      <nav class="navbar">
+        
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="login.html" style="--i:2;">login</a>
+        <a href="register.html" style="--i:3;">Register</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Real-time Air Quality Data for Kampala</h2>
+            <p>Monitoring pollution trends to create a healthier urban environment</p>
+            <a href="login.html" class="btn">View Dashboard</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Trend Analysis</h3>
+                <p>Track air quality changes over time with our interactive charts</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Location Data</h3>
+                <p>See pollution levels across different areas of Kampala</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bell"></i>
+                <h3>Alerts</h3>
+                <p>Get notified when air quality reaches dangerous levels</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="current-status">
+        <div class="container">
+            <h2>Current Air Quality Index (AQI)</h2>
+            <div class="aqi-display" id="current-aqi">
+                <!-- Will be populated by JavaScript -->
+                <div class="loading">Loading data...</div>
+            </div>
+            <div class="aqi-scale">
+                <div class="scale-level good">Good (0-50)</div>
+                <div class="scale-level moderate">Moderate (51-100)</div>
+                <div class="scale-level unhealthy-sensitive">Unhealthy for Sensitive Groups (101-150)</div>
+                <div class="scale-level unhealthy">Unhealthy (151-200)</div>
+                <div class="scale-level very-unhealthy">Very Unhealthy (201-300)</div>
+                <div class="scale-level hazardous">Hazardous (301-500)</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kampala Air Quality Monitoring System</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter" style = ' font-size: 48px;color:blue'></i></a>
+                <a href="#"><i class = "fab fa-facebook" style='font-size: 48px;color:rgb(19, 19, 207);'
+                    
+                    ></i></a>
+                <a href="#"><i class="fab fa-instagram" style="color: blueviolet;font-size: 48px "></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
